@@ -49,15 +49,15 @@ public class ClientWindow extends JFrame implements ActionListener, TCPConnectio
     private static String password = "33gjgeufq";
 
     public static void main(String[] args) throws Exception {
+        //insertkeys(); break;
         Scanner myObj = new Scanner(System.in);
         System.out.println("Enter port: ");
         PORT = myObj.nextInt();
-        System.out.println("Enter number: ");
+        System.out.println("Enter number of keyset: ");
         NUMBER = myObj.nextInt();
 
         cipher = Cipher.getInstance("RSA");
 
-        //insertkeys();
         getKeys();
 
         SwingUtilities.invokeLater(new Runnable() {
